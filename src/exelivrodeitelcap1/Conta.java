@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Diogo
+ * @author Diogo Figueiredo
  */
 public class Conta {
 
