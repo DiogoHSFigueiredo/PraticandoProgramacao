@@ -1,2 +1,0 @@
-exelivrodeitelcap8.SimpleTime
-exelivrodeitelcap8.ThisTest
