@@ -9,7 +9,7 @@ package exelivrodeitelcap8;
  *
  * @author Diogo
  */
-// Declarando um tipo enum com um construtor e campos de instância explicitos e metodos de acesso para esses campos
+// Declarando um tipo enum com um construtor e campos de instância explicitos e metodos de acesso para esses campos -
 public enum Book {
     
     //declara constantes do tipo enum
