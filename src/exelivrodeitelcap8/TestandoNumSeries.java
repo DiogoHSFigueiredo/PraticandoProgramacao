@@ -12,11 +12,11 @@ public class TestandoNumSeries {
 
     public static void main(String[] args) {
 
-        TesteNumSerie Mercedes = new TesteNumSerie();
-        TesteNumSerie BMW = new TesteNumSerie();
-        TesteNumSerie Audi = new TesteNumSerie();
+        ObjetosNumSerie Mercedes = new ObjetosNumSerie();
+        ObjetosNumSerie BMW = new ObjetosNumSerie();
+        ObjetosNumSerie Audi = new ObjetosNumSerie();
 
-        System.out.println("Este e o numero sequencial inicial " + TesteNumSerie.SeqInicial);
+        System.out.println("Este e o numero sequencial inicial " + ObjetosNumSerie.SeqInicial);
 
         System.out.println("O numero de serie do primeiro objeto e " + Mercedes.NumSerie());
         System.out.println("O numero de serie do primeiro objeto e " + BMW.NumSerie());

@@ -10,7 +10,7 @@ import java.util.Random;
  *
  * @author Diogo
  */
-public class TesteNumSerie {
+public class ObjetosNumSerie {
 
     //cria objeto n para inicar um numero aleatorio
     static final Random n = new Random();
@@ -25,7 +25,7 @@ public class TesteNumSerie {
     private final int Serie = numSerie;
 
     //construtor
-    public TesteNumSerie() {
+    public ObjetosNumSerie() {
 
         //incrementa o numero sequencia para objetos criados
         numSerie++;
