@@ -17,6 +17,8 @@ public class DrawPanel extends JPanel {
 
     private SecureRandom randomNumbers = new SecureRandom();
     private MyLine[] lines; //array de linhas
+    private MyRectangle[] retangulo; //array de retangulos
+    private MyOval[] elipse; //array de elipses
 
     //Construtor cria um painel com formas aleatorias
     public DrawPanel() {
@@ -24,6 +26,42 @@ public class DrawPanel extends JPanel {
         setBackground(Color.WHITE);
 
         lines = new MyLine[5 + randomNumbers.nextInt(5)];
+        retangulo = new MyRectangle[5 + randomNumbers.nextInt(5)];
+        elipse = new MyOval[5 + randomNumbers.nextInt(5)];
+
+        //cria elipses
+        for (int count = 0; count < elipse.length; count++) {
+
+            //gera coordenadas aleatórias;
+            int x1 = randomNumbers.nextInt(300);
+            int y1 = randomNumbers.nextInt(300);
+            int x2 = randomNumbers.nextInt(300);
+            int y2 = randomNumbers.nextInt(300);
+
+            //gera cor aleatória
+            Color color = new Color(randomNumbers.nextInt(256), randomNumbers.nextInt(256), randomNumbers.nextInt(256));
+
+            //adiciona uma elipse a lista de elipses a ser exibida
+            elipse[count] = new MyOval(x1, y1, x2, y2, color, true);
+
+        }
+
+        //cria retangulos
+        for (int count = 0; count < retangulo.length; count++) {
+
+            //gera coordenadas aleatórias;
+            int x1 = randomNumbers.nextInt(300);
+            int y1 = randomNumbers.nextInt(300);
+            int x2 = randomNumbers.nextInt(300);
+            int y2 = randomNumbers.nextInt(300);
+
+            //gera uma cor aleatória
+            Color color = new Color(randomNumbers.nextInt(256), randomNumbers.nextInt(256), randomNumbers.nextInt(256));
+
+            //adiciona um retângulo a lista de retângulos a ser exibido
+            retangulo[count] = new MyRectangle(x1, y1, x2, y2, color, true);
+
+        }
 
         //cria linhas
         for (int count = 0; count < lines.length; count++) {
@@ -41,15 +79,24 @@ public class DrawPanel extends JPanel {
             lines[count] = new MyLine(x1, y1, x2, y2, color);
 
         }
-    }
+    } // fim do construtor
 
     //Para cada array de forma, desenha as formas individuais
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        
+
         //desenha as linhas
-        for(MyLine line : lines)
+        for (MyLine line : lines) {
             line.draw(g);
+        }
+        //desenha os retangulos
+        for (MyRectangle retangulos : retangulo) {
+            retangulos.draw(g);
+        }
+        //desenha as elipses
+        for (MyOval elipses : elipse) {
+            elipses.draw(g);
+        }
 
     }
 

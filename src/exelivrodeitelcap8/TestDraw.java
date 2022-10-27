@@ -18,7 +18,7 @@ public class TestDraw {
 
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.add(panel);
-        app.setSize(300, 300); 
+        app.setSize(650, 650); 
         app.setVisible(true);
 
     }
