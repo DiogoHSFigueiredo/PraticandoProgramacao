@@ -48,7 +48,6 @@ public class DrawRectangle extends JPanel {
 
         //desenha os retangulos
         for (Rectangle retangulo : retangulos) {
-
             retangulo.draw(g);
         }
 
