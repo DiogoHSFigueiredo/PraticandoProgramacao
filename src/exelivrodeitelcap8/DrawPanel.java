@@ -28,7 +28,8 @@ public class DrawPanel extends JPanel {
         lines = new MyLine[5 + randomNumbers.nextInt(5)];
         retangulo = new MyRectangle[5 + randomNumbers.nextInt(5)];
         elipse = new MyOval[5 + randomNumbers.nextInt(5)];
-
+        
+        
         //cria elipses
         for (int count = 0; count < elipse.length; count++) {
 
