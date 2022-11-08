@@ -13,6 +13,7 @@ public class Time2 {
     private int hour; // 0-23
     private int minute; // 0-59
     private int second; // 0-59
+    private int secondDaily; //0-86399 (segundos dentro de 24 horas)
 
     // construor sem argumento Time2:
     //Inicializa cada variavel de instancia para zero
@@ -95,31 +96,53 @@ public class Time2 {
         }
         this.second = second;
     }
-    
+
     //Métodos get
-    
     // Obtém o valor da hora
-    public int getHour(){
+    public int getHour() {
         return hour;
     }
-    
+
     //Obtém o valor dos minutos
-    public int getMinute(){
+    public int getMinute() {
         return minute;
     }
-    
+
     //Obtém o valor dos segundos
-    public int getSecond(){
+    public int getSecond() {
         return second;
     }
-    
+
     //Converte em String no formato de data/hora universal (HH:MM:SS)
-    public String toUniversalString(){
+    public String toUniversalString() {
         return String.format("%02d:%02d:%02d", getHour(), getMinute(), getSecond());
     }
-    
+
     //Converte em String no formato padrão de data/hora (H:MM:SS AM ou PM)
-    public String toString(){
-        return String.format("%d:%02d:%02d %s", ((getHour()==0|| getHour() ==12)? 12 : getHour() %12), getMinute(), getSecond(), (getHour() <12 ? "AM" : "PM"));
+    public String toString() {
+        return String.format("%d:%02d:%02d %s", ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12), getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
     }
+
+    //Metodo que recebe um formato em horas e retorna o valor em segundos.
+    public int converteSegundos(int hora, int minutos, int segundos) {
+        int segundosDaily = 0;
+        if (segundos != 0) {
+            segundosDaily += segundos;
+        }
+        if (minutos != 0) {
+            segundosDaily += minutos * 60;
+        }
+        if (hora != 0) {
+            segundosDaily += ((hora * 60) * 60);
+        }
+        return segundosDaily;
+    }
+    
+    //este método recebe um objeto time2 e lhe incrementa 1 segundo à sua data/hora
+    public void tick (Time2 objeto){
+        
+        objeto.setMinute(this.getMinute()+1);
+        
+    }
+    
 } // fim da classe Time2
