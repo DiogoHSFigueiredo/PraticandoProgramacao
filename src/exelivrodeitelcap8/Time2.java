@@ -137,12 +137,55 @@ public class Time2 {
         }
         return segundosDaily;
     }
-    
-    //este método recebe um objeto time2 e lhe incrementa 1 segundo à sua data/hora
-    public void tick (Time2 objeto){
-        
-        objeto.setMinute(this.getMinute()+1);
-        
+
+    //método recebe um objeto Time2 e lhe incrementa 1 segundo à sua data/hora
+    public void incrementSecond(Time2 obj) {
+        if (obj.getSecond() == 59) {
+            obj.setSecond(00);
+
+            if (obj.getMinute() == 59) {
+                obj.setMinute(00);
+
+                if (obj.getHour() == 23) {
+                    obj.setHour(00);
+                } else {
+                    obj.setHour(getHour() + 1);
+                }
+
+            } else {
+                obj.setMinute(getMinute() + 1);
+            }
+
+        } else {
+            obj.setSecond(getSecond() + 1);
+        }
     }
-    
+
+//metodo recebe um objeto Time2 e lhe incrementa 1 minuto à sua data/hora
+    public void incrementMinute(Time2 obj) {
+
+        if (obj.getMinute() == 59) {
+            obj.setMinute(00);
+
+            if (obj.getHour() == 23) {
+                obj.setHour(00);
+            } else {
+                obj.setHour(getHour() + 1);
+            }
+
+        } else {
+            obj.setMinute(getMinute() + 1);
+        }
+
+    }
+
+    //metodo recebe um objeto Time2 e lhe incrementa 1 hora à sua data/hora
+    public void incrementHour(Time2 obj) {
+        if (obj.getHour() == 23) {
+            obj.setHour(00);
+        } else {
+            obj.setHour(getHour() + 1);
+        }
+    }
+
 } // fim da classe Time2
