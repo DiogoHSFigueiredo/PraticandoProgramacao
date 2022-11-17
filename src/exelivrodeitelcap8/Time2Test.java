@@ -17,7 +17,7 @@ public class Time2Test {
         Time2 t3 = new Time2(21, 34); //21:34:00
         Time2 t4 = new Time2(12, 25, 42); // 12:25:42
         Time2 t5 = new Time2(t4); //12:25:42
-        Time2 t7 = new Time2(22, 59, 59); // 00:00:01
+        Time2 t7 = new Time2(23, 58, 58); // 00:00:01
 
         System.out.println("Constructed with:");
         displayTime("t1: all default arguments", t1);
@@ -35,7 +35,7 @@ public class Time2Test {
         }
         System.out.println("Calculadora de segundos a apartir da hora informada " + t1.converteSegundos(1, 1, 28));
 
-        //testa o metodo tick da classe time2 que incrementa 1 segundo ao objeto Time2
+        //testa o metodo tick da classe time2 que incrementa 1 segundo, 1 minuto e 1 hora ao objeto Time2
         t7.incrementSecond(t7);
         displayTime("\nt7: Time2 object t7 specified apos chamar o metodo IncrementSecond", t7);
 
@@ -44,6 +44,9 @@ public class Time2Test {
 
         t7.incrementHour(t7);
         displayTime("\nt7: Time2 object t7 specified apos chamar o metodo IncrementHour", t7);
+
+        t7.incrementSecond(t7);
+        displayTime("\nt7: Time2 object t7 specified apos chamar o metodo IncrementSecond", t7);
 
     } // Fim do Metodo main
 

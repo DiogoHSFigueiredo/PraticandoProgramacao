@@ -28,6 +28,12 @@ public class Date {
         if (day <= 0 || (day > daysPerMonth[month] && !(month == 2 && day == 29))) {
             throw new IllegalArgumentException("day (" + day + ") out-of-range for the specified month and year");
         }
+
+        //verifica se year é valido, não negativo
+        if (year < 0) {
+            throw new IllegalArgumentException("Year (" + year + ") out-of-range - no negative values");
+        }
+
         this.month = month;
         this.day = day;
         this.year = year;
@@ -38,6 +44,22 @@ public class Date {
     //retorna uma String no formato mês/dia/ano
     public String toString() {
         return String.format("%d/%d/%d", month, day, year);
+    }
+
+    //Metodo que incrementa a data em 1 dia
+    public void nextDay() {
+        if (daysPerMonth[month] == day) {
+            if (month != 12) {
+                month += 1;
+            } else if (month == 12) {
+                month = 1;
+                year += 1;
+            }
+            day = 1;
+        } else {
+            day += 1;
+        }
+
     }
 
 } // fim da classe
