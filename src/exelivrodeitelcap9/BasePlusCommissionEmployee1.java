@@ -49,4 +49,4 @@ public class BasePlusCommissionEmployee1 extends ComissionEmployee {
         return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f", " base-salaried comission employee", firstName, lastName, "social security number", socialSecurityNumber, "gross sales", grossSales, "comission rate", comissionRate, "base salary", baseSalary);
     }
     
-}// fim da classe
+}// fim da classe obgd
