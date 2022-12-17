@@ -22,31 +22,32 @@ public class SalariedEmployee extends Employee {
         }
         this.weeklySalary = weeklySalary;
     }
+
     //configura o salario
-    public void setWeeklySalary(double weeklySalary){
-         if (weeklySalary < 0.0) {
+    public void setWeeklySalary(double weeklySalary) {
+        if (weeklySalary < 0.0) {
             throw new IllegalArgumentException(
                     "Weekly salary must be >= 0.0");
         }
-         this.weeklySalary = weeklySalary;
+        this.weeklySalary = weeklySalary;
     }
+
     //retorna o salario
-    public double getWeeklySalary()
-    {
+    public double getWeeklySalary() {
         return weeklySalary;
     }
 
-    //calcula os rendimentos; sobrescreve o método earnings em Employee
+    //calcula os rendimentos; implementa o metodo Payable da interface que era abstrata na superclasse Employee
     @Override
-    public double earnings()
-    {
+    public double getPaymentAmount() {
         return getWeeklySalary();
     }
-    
+
     //retorna a representacao String do objeto SalariedEmployee
     @Override
-    public String toString()
-    {
+    public String toString() {
         return String.format("salaried employee: %s%n%s: $%,.2f", super.toString(), "weekly salary", getWeeklySalary());
     }
+
+    
 } //fim da classe

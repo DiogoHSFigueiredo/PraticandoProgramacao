@@ -48,7 +48,7 @@ public class PayrollSystemTest {
                 //downcast da referencia de Employee para
                 //referencia a BasePlusCommissionEmployee
                 BasePlusCommissionEmployee employee = (BasePlusCommissionEmployee) currentEmployee;
-                employee.setBaseSalary(1.10 * employee.getBaseSalary());
+                employee.setBaseSalary(1.10 * employee.getBaseSalary()); 
 
                 System.out.printf("new base salary with 10%% increase is: $%,.2f%n", employee.getBaseSalary());
 
