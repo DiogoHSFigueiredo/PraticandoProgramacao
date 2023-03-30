@@ -31,7 +31,7 @@ public class MyRectangle {
         this.use = use;
     }
 
-    //construtor c/ argumentos
+    //construtor s/ argumentos
     public MyRectangle() {
         this.x1 = 0;
         this.y1 = 0;

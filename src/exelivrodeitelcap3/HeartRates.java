@@ -3,22 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package exelivrodeitelcap3;
-
-import java.util.Calendar;
-import java.util.Date;
-
 /**
  *
  * @author Diogo
  */
-public class HeartRates { //inicio da classe de padroes cardiacos
+public class HeartRates {
 
     private String nome;
     private String sobrenome;
     private int anoNascimento;
     private int mesNascimento;
     private int diaNascimento;
-    private int idade;
+    private int idade = calcIdade();
     private int fCM;
     private int fCAMax;
     private int fCAMin;
@@ -27,17 +23,19 @@ public class HeartRates { //inicio da classe de padroes cardiacos
     public HeartRates(String nome, String sobrenome, int diaNascimento, int mesNascimento, int anoNascimento) {
         this.nome = nome;
         this.sobrenome = sobrenome;
-        this.idade = calcIdade(diaNascimento, mesNascimento, anoNascimento);
+        this.diaNascimento = diaNascimento;
+        this.mesNascimento = mesNascimento;
+        this.anoNascimento = anoNascimento;
 
     } //fim construtor
 
 //metodo que calcula idade
-    private int calcIdade(int diaNascimento, int mesNascimento, int anoNascimento) {
+    private int calcIdade() {
 
         int calIdade = 0;
-        int diaAtual = Calendar.DATE;
-        int mesAtual = Calendar.MONTH;
-        int anoAtual = Calendar.YEAR;
+        int diaAtual = 8;
+        int mesAtual = 3;
+        int anoAtual = 2022;
 
         if (mesAtual >= mesNascimento) {
             if (diaNascimento > diaAtual) {
@@ -92,15 +90,11 @@ public class HeartRates { //inicio da classe de padroes cardiacos
     }
 
     public int getIdade() {
-        return idade;
-    }
-
-    public void setIdade(int idade) {
-        this.idade = idade;
+        return this.calcIdade();
     }
 
     public int getfCM() {
-        fCM = (220 - this.idade);
+        fCM = (220 - this.calcIdade());
 
         return fCM;
     }

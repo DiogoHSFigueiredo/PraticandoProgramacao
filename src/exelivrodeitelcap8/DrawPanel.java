@@ -29,7 +29,6 @@ public class DrawPanel extends JPanel {
         retangulo = new MyRectangle[5 + randomNumbers.nextInt(5)];
         elipse = new MyOval[5 + randomNumbers.nextInt(5)];
         
-        
         //cria elipses
         for (int count = 0; count < elipse.length; count++) {
 
@@ -85,7 +84,7 @@ public class DrawPanel extends JPanel {
     //Para cada array de forma, desenha as formas individuais
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-
+        
         //desenha as linhas
         for (MyLine line : lines) {
             line.draw(g);

@@ -30,15 +30,13 @@ public class FaixaSolidaria {
 
         double custoDia = (((kmDia / consumoLitro) * precoGas) + txEstacDia);
         double numPessoas;
-        double custoMensal = custoDia * 30;
+        double custoMensal = custoDia * 25;
 
         numPessoas = Double.parseDouble(JOptionPane.showInputDialog("Digite o numero de pessoas no veiculo para dividir a conta"));
 
-        if (numPessoas
-                == 0) {
+        if (numPessoas == 0) {
             JOptionPane.showInputDialog("Veiculo Fantasma, nao e possivel calcular");
-        } else if (numPessoas
-                > 1) {
+        } else if (numPessoas >= 1) {
             custoDia /= numPessoas;
             JOptionPane.showMessageDialog(null, "O valor mensal das despesas e " + String.format("%.2f", +(custoMensal * numPessoas)) + "\nCom o faixa solidaria dividido para " + numPessoas + "\nCada um vai pagar por mes " + String.format("%.2f", custoMensal));
 
@@ -50,7 +48,7 @@ public class FaixaSolidaria {
 
     public static void main(String[] args) {
 
-        FaixaSolidaria gol = new FaixaSolidaria("Fit", 8, 3.65, 6.6, 38);
+        FaixaSolidaria gol = new FaixaSolidaria("Fit", 30, 5.00, 0.0, 38);
 
         CustoMensal(gol);
     }

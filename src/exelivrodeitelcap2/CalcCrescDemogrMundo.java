@@ -24,7 +24,7 @@ public class CalcCrescDemogrMundo {
 
             ano--;
         }
-        JOptionPane.showMessageDialog(null, "A populaÃ§Ã£o mundial sera de " + popWorld +" bilhoes de pessoas");
+        JOptionPane.showMessageDialog(null, "A população mundial sera de: " + popWorld +" MI");
 
         return popWorld;
 
@@ -32,7 +32,8 @@ public class CalcCrescDemogrMundo {
 
     public static void main(String[] args) {
 
-        int ano = Integer.parseInt(JOptionPane.showInputDialog("Digite quantos anos quer projetar para calculo da populaÃ§Ã£o mundial "));
+         JOptionPane.showMessageDialog(null, "A populacao mundial em 2022 é de: "+popWorld+" MI");
+        int ano = Integer.parseInt(JOptionPane.showInputDialog("Digite quantos anos quer projetar para calculo da população mundial "));
 
         if (ano != 0) {
 

@@ -14,8 +14,7 @@ import javax.swing.JFrame;
 public class TestePinturaArcos {
 
     public static void main(String[] args) {
-       
-        /*
+
         PintandoCirculos painel = new PintandoCirculos();
         JFrame app = new JFrame();
 
@@ -23,11 +22,8 @@ public class TestePinturaArcos {
         app.add(painel);
         app.setSize(400, 250);
         app.setVisible(true);
-*/
-        ArrayList Lista = new ArrayList();
-        Lista.add("Oi");
-        Lista.add (4);
-        System.out.println(Lista.size());
+
+        
     }
 
 } // fim da classe
