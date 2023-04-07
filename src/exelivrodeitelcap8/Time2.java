@@ -43,6 +43,9 @@ public class Time2 {
             throw new IllegalArgumentException("second must be 0-59");
         }
         this.hour = hour;
+        
+        
+        
         this.minute = minute;
         this.second = second;
     }

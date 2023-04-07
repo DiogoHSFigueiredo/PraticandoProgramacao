@@ -29,9 +29,9 @@ public class Date {
             throw new IllegalArgumentException("day (" + day + ") out-of-range for the specified month and year");
         }
 
-        //verifica se year é valido, não negativo
-        if (year < 0) {
-            throw new IllegalArgumentException("Year (" + year + ") out-of-range - no negative values");
+        //verifica no ano bissexto se o mês é 2 e o dia é 29
+        if (month == 2 && day == 29 && !(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))) {
+            throw new IllegalArgumentException("Day (" + day + ")out-of-range for the specified month and year");
         }
 
         this.month = month;

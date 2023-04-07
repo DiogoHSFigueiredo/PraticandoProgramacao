@@ -15,7 +15,7 @@ public class TimeTest {
 //cria e inicializa objeto time
         Time1 time = new Time1(); //invoca o construtor time1
 
-//gera sai de representação de String da data/hora
+//gera saida de representação de String da data/hora
         displayTime("After time object is created", time);
         System.out.println();
 
@@ -23,7 +23,6 @@ public class TimeTest {
         time.setTime(13, 27, 6);
         displayTime("After calling setTime", time);
         System.out.println(); //
-
 
         // tenta definir data/hora com valores invalidos
         try {

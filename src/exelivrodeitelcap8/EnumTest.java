@@ -1,13 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package exelivrodeitelcap8;
 
 import java.util.EnumSet;
 
 /**
- *
  * @author Diogo
  */
 //Testando o tipo enum Book.
@@ -24,9 +19,9 @@ public class EnumTest {
         System.out.printf("%nDisplay a range of enum constants:%n");
 
         // imprime os primeiros quatro livros
-        for (Book book : EnumSet.range(Book.JHTP, Book.CPPHTP)) 
+        for (Book book : EnumSet.range(Book.JHTP, Book.CPPHTP)) {
             System.out.printf("%-10s%-45s%s%n", book, book.getTitle(), book.getCopyrightYear());
-        
+        }
 
     }
 

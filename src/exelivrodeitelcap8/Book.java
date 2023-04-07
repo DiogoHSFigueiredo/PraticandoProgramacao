@@ -9,7 +9,7 @@ package exelivrodeitelcap8;
  *
  * @author Diogo Figueiredo
  */
-// Declarando um tipo enum com um construtor e campos de instância explicitos e metodos de acesso para esses campos -
+// Declarando uma classe tipo enum com um construtor e campos de instância explicitos e metodos de acesso para esses campos -
 public enum Book {
     
     //declara constantes do tipo enum
@@ -18,7 +18,7 @@ public enum Book {
     IW3HTP("internet & World Wide Web How to Program", "2012"),
     CPPHTP("C++ How to Program", "2014"),
     VBHTP("Visual Basic How to Program", "2014"),
-    CSHARPHTP("Visual C# How to Program", "2014");
+    CSHARPHTP("Visual C# How to Program", "20114");
     
     //campos de instância
     private final String title; // título de livro
