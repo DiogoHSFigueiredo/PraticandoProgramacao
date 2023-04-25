@@ -8,7 +8,7 @@ package exelivrodeitelcap10;
  *
  * @author Diogo
  */
-public abstract class Employee implements Payable{
+public abstract class Employee implements Payable {
 
     private final String firstName;
     private final String lastName;
@@ -44,6 +44,7 @@ public abstract class Employee implements Payable{
     }
 
     //o metodo abstract deve ser sobrescrito pelas subclasses concretas
-    public abstract double getPaymentAmount(); //nenhuma implementacao aqui
+    // public abstract double getPaymentAmount(); //nenhuma implementacao aqui
+
 
 } // fim da classe

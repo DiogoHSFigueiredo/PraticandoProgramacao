@@ -79,7 +79,7 @@ public class BasePlusCommissionEmployee {
     }
 
     //retorna a taxa de comissao
-    public double getCommissionRate() {
+    public double getComissionRate() {
         return comissionRate;
     }
 
@@ -98,12 +98,12 @@ public class BasePlusCommissionEmployee {
 
     //calcula os lucros
     public double earning() {
-        return baseSalary + (comissionRate * grossSales);
+        return getBaseSalary() + (getComissionRate() * getGrossSales());
     }
 
     //retorna a representacao de String de BasePlusCommissionEmployee
     @Override
     public String toString() {
-        return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f", "base-salaried comission employee", firstName, lastName, "social security number", socialSecurityNumber, "gross sales", grossSales, "comission rate", comissionRate, "base salary", baseSalary);
+        return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f", "base-salaried comission employee", getFirstName(), getLastName(), "social security number", getSocialSecurityNumber(), "gross sales", getGrossSales(), "comission rate", getComissionRate(), "base salary", getBaseSalary());
     }
 } // fim da classe 

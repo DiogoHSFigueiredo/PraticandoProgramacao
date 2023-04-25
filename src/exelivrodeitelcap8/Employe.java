@@ -10,7 +10,7 @@ package exelivrodeitelcap8;
  */
 public class Employe {
 
-    private static int count = 0; // numero de Employes criados, instanciados, objetos a partir da classe
+    private static int count = 0; // numero de Employes criados, instanciados, a partir da classe
     private String firstName;
     private String lastName;
 
@@ -19,7 +19,7 @@ public class Employe {
         this.firstName = firstName;
         this.lastName = lastName;
 
-        ++count; // incrementa contagem estática de empregados
+        ++count; // incrementa contagem no campo de classe 'static' count 
         System.out.printf("Employe constructor: %s %s; count = %d%n", firstName, lastName, count);
 
     }

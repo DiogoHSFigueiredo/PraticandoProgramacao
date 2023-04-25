@@ -4,7 +4,9 @@
  */
 package exelivrodeitelcap8;
 
+import java.awt.BorderLayout;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 
 /**
  *
@@ -15,10 +17,12 @@ public class TestDraw {
     public static void main(String[] args) {
         DrawPanel panel = new DrawPanel();
         JFrame app = new JFrame();
-
+        JLabel rodape = new JLabel();
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.add(panel);
-        app.setSize(650, 650); 
+        rodape.setText(panel.Status());
+        app.add(rodape, BorderLayout.SOUTH);
+        app.setSize(600, 600);
         app.setVisible(true);
 
     }

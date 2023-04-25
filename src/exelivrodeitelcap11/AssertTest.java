@@ -18,7 +18,10 @@ public class AssertTest {
        System.out.print("Enter a number between 0 and 10: ");
        int number = tec.nextInt();
        
-       //afirma que o valor é >= 0 e <=10
+       //afirma que o valor ï¿½ >= 0 e <=10
+       
+       
+       //necessÃ¡rio ativar no prompt do java comando "java -ea AssertTest"
        assert(number <= 10) : "bad number: "+number;
        
        System.out.printf("You entered %d%n", number);

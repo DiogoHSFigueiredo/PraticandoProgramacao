@@ -9,44 +9,45 @@ package exelivrodeitelcap9;
  * @author Diogo
  */
 public class BasePlusCommissionEmployee1 extends ComissionEmployee {
-    
+
     private double baseSalary; //salario-base por semana
-    
+
     //construtor de seis argumentos
-    public BasePlusCommissionEmployee1 (String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate, double baseSalary){
+    public BasePlusCommissionEmployee1(String firstName, String lastName, String socialSecurityNumber, double grossSales, double commissionRate, double baseSalary) {
         super(firstName, lastName, socialSecurityNumber, grossSales, commissionRate);
-        
+
         //se baseSalary é invalido, lanca uma excecao
-        if (baseSalary < 0.0){
+        if (baseSalary < 0.0) {
             throw new IllegalArgumentException("Base salary must be >=0.0");
-            }
+        }
         this.baseSalary = baseSalary;
-       
+
     } // fim do construtor
-    
+
     //configura o salario-base
-    public void setBaseSalary(double baseSalary){
-        if (baseSalary < 0.0){
+    public void setBaseSalary(double baseSalary) {
+        if (baseSalary < 0.0) {
             throw new IllegalArgumentException("Base salary must be >=0.0");
         }
         this.baseSalary = baseSalary;
     }
-    
+
     //retorna o salario-base
-    public double getBaseSalary(){
+    public double getBaseSalary() {
         return baseSalary;
     }
-    
+
     //calcula os lucros
     @Override // indica que esse metodo substitui um metodo da superclasse
-    public double earnings(){
-        return baseSalary+(comissionRate * grossSales);
+    public double earnings() {
+        return baseSalary + super.earnings();
     }
-    
+
     //retorna a representacao String de BasePlusCommionEmployee1
     @Override
-    public String toString(){
-        return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f%n%s: %.2f", " base-salaried comission employee", firstName, lastName, "social security number", socialSecurityNumber, "gross sales", grossSales, "comission rate", comissionRate, "base salary", baseSalary);
+    public String toString() {
+        return String.format("%s %s%n%s: %.2f", "base-salaried", super.toString(), "base salary", getBaseSalary());
     }
-    
-}// fim da classe obgd
+
+}// fim da classe
+

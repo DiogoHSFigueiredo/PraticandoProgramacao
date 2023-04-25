@@ -61,7 +61,7 @@ public class HourlyEmployee extends Employee {
 
     //calcula os rendimentos; sobrescreve o metodo earnings em Employee
     @Override
-    public double getPaymentAmoynt() {
+    public double getPaymentAmount() {
         if (getHours() <= 40) //nenhuma hora extra
         {
             return getWage() * getHours();

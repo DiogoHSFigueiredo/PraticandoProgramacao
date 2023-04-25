@@ -28,17 +28,17 @@ public class DrawPanel extends JPanel {
         lines = new MyLine[5 + randomNumbers.nextInt(5)];
         retangulo = new MyRectangle[5 + randomNumbers.nextInt(5)];
         elipse = new MyOval[5 + randomNumbers.nextInt(5)];
-        
+
         //cria elipses
         for (int count = 0; count < elipse.length; count++) {
 
-            //gera coordenadas aleatórias;
+            //gera coordenadas aleatórias para desenhar a elipse;
             int x1 = randomNumbers.nextInt(300);
             int y1 = randomNumbers.nextInt(300);
             int x2 = randomNumbers.nextInt(300);
             int y2 = randomNumbers.nextInt(300);
 
-            //gera cor aleatória
+            //gera cor aleatória da elipse
             Color color = new Color(randomNumbers.nextInt(256), randomNumbers.nextInt(256), randomNumbers.nextInt(256));
 
             //adiciona uma elipse a lista de elipses a ser exibida
@@ -81,23 +81,27 @@ public class DrawPanel extends JPanel {
         }
     } // fim do construtor
 
-    //Para cada array de forma, desenha as formas individuais
+    //Para cada array de forma, desenha as formas individuais automaticamente porque e uma caracteristica do JPANEL executar este metodo
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        
-        //desenha as linhas
+
+        //desenha as linhas a partir dos arrays
         for (MyLine line : lines) {
             line.draw(g);
         }
-        //desenha os retangulos
+        //desenha os retangulos a partir dos arrays
         for (MyRectangle retangulos : retangulo) {
             retangulos.draw(g);
         }
-        //desenha as elipses
+        //desenha as elipses a partir dos arrays
         for (MyOval elipses : elipse) {
             elipses.draw(g);
         }
 
+    }
+
+    public String Status() {
+        return String.format("Linhas %d Ovais %d Rectangles %d", lines.length, elipse.length, retangulo.length);
     }
 
 } //fim da classe

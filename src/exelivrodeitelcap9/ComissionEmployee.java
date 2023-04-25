@@ -84,13 +84,13 @@ public class ComissionEmployee extends Object {
 
     //calcula os lucros
     public double earnings() {
-        return comissionRate * grossSales;
+        return getComissionRate() * getGrossSales();
     }
 
     //retorna a representacao String do objeto ComissionEmployee
     @Override //indica que esse metodo substitui um metodo da superclasse
     public String toString() {
-        return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f", "comission employee", firstName, lastName, "social security number", socialSecurityNumber, "gross sales", grossSales, "comission rate", comissionRate);
+        return String.format("%s: %s %s%n%s: %s%n%s: %.2f%n%s: %.2f", "comission employee", getFirstName(), getLastName(), "social security number", getSocialSecurityNumber(), "gross sales", getGrossSales(), "comission rate", getComissionRate());
     }
 
 }// fim da classe ComissionEmployee

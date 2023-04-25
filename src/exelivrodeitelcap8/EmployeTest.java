@@ -12,7 +12,7 @@ public class EmployeTest {
 
     public static void main(String[] args) {
 
-        //mostra que a contagem e 0 antes de criar Employes (objetos)
+        //mostra que a contagem e 0 antes de criar/instanciar Employes (objetos)
         System.out.printf("Employes before instantiation: %d%n", Employe.getCount());
 
         //cria dois Employes; a contagem deve ser 2

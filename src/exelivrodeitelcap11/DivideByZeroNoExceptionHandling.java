@@ -1,16 +1,21 @@
 package exelivrodeitelcap11;
-//Classe demonstra a divisão de inteiro por 0 sem tratamento de exceÃ§Ã£o.
+//Classe demonstra a divisï¿½o de inteiro por 0 sem tratamento de exceÃ§Ã£o.
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
+
 /**
  * @author Diogo
  */
 public class DivideByZeroNoExceptionHandling {
-    //demonstra o lancamento de uma excessão quando ocorre uma divisão por zero
+
+    //demonstra o lancamento de uma excessï¿½o quando ocorre uma divisï¿½o por zero
     public static int quotient(int numerator, int denominator)
-            throws ArithmeticException {
-        return numerator / denominator; //possível divisão por zero
+          //  throws ArithmeticException 
+    {
+        return numerator / denominator; //possï¿½vel divisï¿½o por zero
     }
+
     public static void main(String[] args) {
         Scanner tec = new Scanner(System.in);
         boolean continueLoop = true; //determina se mais entradas sao necessarias
@@ -23,7 +28,7 @@ public class DivideByZeroNoExceptionHandling {
                 System.out.print("Por favor insira um denominador inteiro\n");
                 int denominator = tec.nextInt();
 
-                 int result = quotient(numerator, denominator);
+                int result = quotient(numerator, denominator);
 
                 System.out.printf("%nResult: %d / %d = %d%n", numerator, denominator, result);
                 continueLoop = false; //entrada bem sucedida; fim do loop

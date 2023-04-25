@@ -29,8 +29,7 @@ public class Interest {
             BigDecimal amount = principal.multiply(rate.add(BigDecimal.ONE).pow(year));
 
 //exibe o ano e a quantidade
-            System.out.printf("%4d%20s%n", year, NumberFormat.getCurrencyInstance().format(amount));
-            
+            System.out.printf("%1d%20s%n", year, NumberFormat.getCurrencyInstance().format(amount));
         }
 
     } // fim do metodo principal

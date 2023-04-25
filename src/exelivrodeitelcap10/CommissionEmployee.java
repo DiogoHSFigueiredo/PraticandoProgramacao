@@ -58,7 +58,7 @@ public class CommissionEmployee extends Employee {
 
     //calcula os rendimentos; sobrescreve o metodo earnings em Employee
     @Override
-    public double getPaymentAmoynt() {
+    public double getPaymentAmount() {
         return getCommissionRate() * getGrossSales();
     }
 

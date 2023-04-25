@@ -16,7 +16,7 @@ public class TestandoFormasComPolimorfismo {
 
         CriandoFormas panel = new CriandoFormas();
         JFrame app = new JFrame();
-
+        
         app.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         app.add(panel);
         app.setSize(450, 450);
