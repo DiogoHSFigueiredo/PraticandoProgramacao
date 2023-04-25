@@ -4,19 +4,18 @@
  */
 package exelivrodeitelcap12;
 
-import static java.awt.FlowLayout.CENTER;
 import javax.swing.JFrame;
 
 /**
  *
  * @author Diogo
  */
-public class CheckBoxTest {
+public class ListTest {
     
     public static void main(String[] args) {
-        ComboBoxFrame comboBoxFrame = new ComboBoxFrame();
-        comboBoxFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        comboBoxFrame.setSize(250, 250);
-        comboBoxFrame.setVisible(true);
+        ListFrame listFrame = new ListFrame(); //cria ListFrame
+        listFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        listFrame.setSize(350,150);
+        listFrame.setVisible(true);
     }
 }
