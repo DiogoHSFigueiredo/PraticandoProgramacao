@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package exelivrodeitelcap12;
 
 import java.awt.FlowLayout;
@@ -52,8 +48,8 @@ public class TextFieldFrame extends JFrame {
         textField3.addActionListener(handler);
         passwordField.addActionListener(handler);
     }
-
 //classe interna private para tratamento de evento
+
     private class TextFieldHandler implements ActionListener {
 
         @Override
