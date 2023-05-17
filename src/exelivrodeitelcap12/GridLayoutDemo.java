@@ -10,16 +10,14 @@ import javax.swing.JFrame;
  *
  * @author Diogo
  */
-public class BorderLayoutDemo {
+public class GridLayoutDemo {
 
     public static void main(String[] args) {
 
-        BorderLayoutFrame borderLayoutFrame = new BorderLayoutFrame();
-        borderLayoutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        borderLayoutFrame.setSize(300, 200);
-        borderLayoutFrame.setVisible(true);
+        GridLayoutFrame gridLayoutFrame = new GridLayoutFrame();
+        gridLayoutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        gridLayoutFrame.setSize(300, 200);
+        gridLayoutFrame.setVisible(true);
 
     }
-
 }
-  

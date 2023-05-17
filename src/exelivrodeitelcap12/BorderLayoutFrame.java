@@ -17,7 +17,7 @@ import javax.swing.JFrame;
 public class BorderLayoutFrame extends JFrame implements ActionListener {
 
     private final JButton[] buttons; //array de botoes para ocultar partes
-    private static final String[] names = {"Hide North", "Hide South", "Hide East", "Hide East", "Hide West", "Hide Center"};
+    private static final String[] names = {"Hide North", "Hide South", "Hide Center", "Hide East", "Hide West", "Hide Center"};
     private final BorderLayout layout;
 
     //configura GUI e tratamento de evento

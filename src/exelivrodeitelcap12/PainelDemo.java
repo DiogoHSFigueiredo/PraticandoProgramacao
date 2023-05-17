@@ -10,16 +10,14 @@ import javax.swing.JFrame;
  *
  * @author Diogo
  */
-public class BorderLayoutDemo {
+public class PainelDemo {
 
     public static void main(String[] args) {
 
-        BorderLayoutFrame borderLayoutFrame = new BorderLayoutFrame();
-        borderLayoutFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        borderLayoutFrame.setSize(300, 200);
-        borderLayoutFrame.setVisible(true);
-
+        PanelFrame panelFrame = new PanelFrame();
+        panelFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        panelFrame.setSize(450, 200);
+        panelFrame.setVisible(true);
     }
 
 }
-  
