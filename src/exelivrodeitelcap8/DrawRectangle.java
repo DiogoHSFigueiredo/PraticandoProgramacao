@@ -15,7 +15,7 @@ import javax.swing.JPanel;
  */
 public class DrawRectangle extends JPanel {
 
-    private Rectangle[] retangulos; //array de linhas
+    private Rectangler[] retangulos; //array de linhas
     private SecureRandom randomNumbers = new SecureRandom();
 
     //Construtor cria um painel com formas aleatorias
@@ -23,7 +23,7 @@ public class DrawRectangle extends JPanel {
 
         setBackground(Color.WHITE);
 
-        retangulos = new Rectangle[5];
+        retangulos = new Rectangler[5];
 
         //cria retangulos
         for (int count = 0; count < retangulos.length; count++) {
@@ -36,7 +36,7 @@ public class DrawRectangle extends JPanel {
             Color color = new Color(randomNumbers.nextInt(256), randomNumbers.nextInt(256), randomNumbers.nextInt(256));
 
             //adiciona um retangulo ao array
-            retangulos[count] = new Rectangle(Length, Width, color);
+            retangulos[count] = new Rectangler(Length, Width, color);
 
         }
 
@@ -47,7 +47,7 @@ public class DrawRectangle extends JPanel {
         super.paintComponent(g);
 
         //desenha os retangulos
-        for (Rectangle retangulo : retangulos) {
+        for (Rectangler retangulo : retangulos) {
             retangulo.draw(g);
         }
 

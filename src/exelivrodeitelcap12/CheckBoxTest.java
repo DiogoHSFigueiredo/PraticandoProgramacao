@@ -14,9 +14,9 @@ import javax.swing.JFrame;
 public class CheckBoxTest {
     
     public static void main(String[] args) {
-        ComboBoxFrame comboBoxFrame = new ComboBoxFrame();
-        comboBoxFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        comboBoxFrame.setSize(250, 250);
-        comboBoxFrame.setVisible(true);
+        CheckBoxFrame CheckBoxFrame = new CheckBoxFrame();
+        CheckBoxFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        CheckBoxFrame.setSize(250, 100);
+        CheckBoxFrame.setVisible(true);
     }
 }

@@ -25,7 +25,7 @@ public class Addition {
         int sum = number1 + number2;
 
         //exibe o resultado em um dialogo de mensagem JOptionPane
-        JOptionPane.showMessageDialog(null, "The sun is " + sum, "Sum of two Integers", JOptionPane.PLAIN_MESSAGE);
+        JOptionPane.showMessageDialog(null, "The sun is " + sum, "Sum of two Integers", JOptionPane.WARNING_MESSAGE);
     }
 
 }

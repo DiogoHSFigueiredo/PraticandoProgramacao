@@ -17,6 +17,7 @@ public class MouseTracker {
         mouseTrackerFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mouseTrackerFrame.setSize(300, 100);
         mouseTrackerFrame.setVisible(true);
+        
     }
 
 }

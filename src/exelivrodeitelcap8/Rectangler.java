@@ -12,7 +12,7 @@ import java.security.SecureRandom;
  *
  * @author Diogo
  */
-public class Rectangle {
+public class Rectangler {
 
     private float length;
     private float width;
@@ -20,7 +20,9 @@ public class Rectangle {
     SecureRandom randomNumbers = new SecureRandom();
 
     //construtor
-    public Rectangle(float length, float width, Color color) {
+ 
+
+    public Rectangler(float length, float width, Color color) {
 
         setLength(length);
         setWidth(width);

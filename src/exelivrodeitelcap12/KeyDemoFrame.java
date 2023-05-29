@@ -11,7 +11,6 @@ import javax.swing.JTextArea;
  * @author Diogo
  */
 public class KeyDemoFrame extends JFrame implements KeyListener {
-
     private  String line1 = ""; //primeira linha da area de texto
     private  String line2 = ""; //segunda linha
     private  String line3 = ""; //terceira linha
@@ -20,13 +19,11 @@ public class KeyDemoFrame extends JFrame implements KeyListener {
     //construtor KeyDemoFrame
     public KeyDemoFrame() {
         super("Demonstrating Keystroke Events");
-
         textArea = new JTextArea(10, 15); //configura JTextArea
         textArea.setText("Press any key on the keyboard...");
         textArea.setEnabled(false);
         textArea.setDisabledTextColor(Color.BLACK);
         add(textArea); //adiciona area de texto ao JFrame
-
         addKeyListener(this); //permite que o frame processe os eventos de teclado
     }
 

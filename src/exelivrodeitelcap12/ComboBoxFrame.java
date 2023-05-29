@@ -43,6 +43,7 @@ public class ComboBoxFrame extends JFrame {
             }
         } // fim da classe interna anonima
         ); // fim da chamada para addItemlistener
+        
         add(imagesJComboBox); // adiciona caixa de combinacao ao JFrame
         label = new JLabel(icons[0]); //exibe primeiro icone
         add(label); //adiciona rotulo ao JFrame
