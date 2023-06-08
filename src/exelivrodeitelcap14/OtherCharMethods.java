@@ -12,8 +12,8 @@ public class OtherCharMethods {
 
     public static void main(String[] args) {
 
-        Character c1 = 'A';
-        Character c2 = 'a';
+        Character c1 = 'B';
+        Character c2 = 'b';
 
         System.out.printf("c1 = %s%nc2 = %s%n%n", c1.charValue(), c2.toString());
 
