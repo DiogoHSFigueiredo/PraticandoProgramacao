@@ -4,6 +4,7 @@
  */
 package exelivrodeitelcap15;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -49,6 +50,7 @@ public class FileAndDirectoryInfo {
 
             } else { // se nao for arquivo ou diretorio, gera saida da mensagem de erro 
                 System.out.printf("%s does not exist%n", path);
+
             }
         }
 
