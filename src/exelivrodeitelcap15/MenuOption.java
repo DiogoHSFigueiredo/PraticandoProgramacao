@@ -16,7 +16,7 @@ public enum MenuOption {
     DEBIT_BALANCE(3),
     END(4);
 
-    private final int value; //opcao atula de menu
+    private final int value; //opcao atual de menu
 
     //construtor
     private MenuOption(int value) {

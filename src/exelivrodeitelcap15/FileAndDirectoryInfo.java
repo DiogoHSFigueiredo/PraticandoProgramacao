@@ -4,7 +4,6 @@
  */
 package exelivrodeitelcap15;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -22,7 +21,7 @@ public class FileAndDirectoryInfo {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Enter file or directory name");
+        System.out.println("Enter file o \\r directory name");
 
         //cria o objeto Path com base na entrada de usuário
         Path path = Paths.get(input.nextLine());
@@ -37,7 +36,7 @@ public class FileAndDirectoryInfo {
             System.out.printf("Path: %s%n", path);
             System.out.printf("Absolute path: %s%n", path.toAbsolutePath());
 
-            if (Files.isDirectory(path)) {//listagem de direotrio de saida
+            if (Files.isDirectory(path)) {//listagem de diretorio de saida
 
                 System.out.printf("%nDirectory contents:%n");
 

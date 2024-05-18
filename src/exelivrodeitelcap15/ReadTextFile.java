@@ -23,7 +23,7 @@ public class ReadTextFile {
     //abre o arquivo clients.txt
     public static void openFile() {
         try {
-            input = new Scanner(Paths.get("clients.txt"));
+            input = new Scanner(Paths.get("Clientes.txt"));
         } catch (IOException ioException) {
             System.err.println("Error opening file. Terminating.");
             System.exit(1);

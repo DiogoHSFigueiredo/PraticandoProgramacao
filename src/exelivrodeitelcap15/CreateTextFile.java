@@ -27,7 +27,12 @@ public class CreateTextFile {
     //abre o arquivo clientes.txt
     public static void openFile() {
         try {
-            output = new Formatter("clients.txt"); //abre o arquivo
+            String name;
+            System.out.println("Digite o nome do arquivo que ira gravar os registros");
+            Scanner entrada = new Scanner(System.in);
+            name = entrada.nextLine();
+            output = new Formatter(name+".txt"); //Cria ou abre o arquivo
+
         } catch (SecurityException securityException) {
             System.err.println("Write permission denied. Terminating.");
             System.exit(1); //termina o programa
@@ -39,9 +44,10 @@ public class CreateTextFile {
 
     //adiciona registros ao arquivo
     public static void addRecords() {
+
         Scanner input = new Scanner(System.in);
-        System.out.printf("%s%n%s%n? ", "Enter account number, first name, last name and balance.",
-                "Enter end-of-file indicator to end input.");
+        System.out.printf("%s%n%s%n%s ", "Enter account number, first name, last name and balance.",
+                "Enter end-of-file indicator to end input.", "Entre c/ registro:");
         int cont = 0;
         while (cont < 6) //faz um loop até o indicador de fim de arquivo
         {
@@ -54,11 +60,12 @@ public class CreateTextFile {
             } catch (NoSuchElementException elementException) {
                 System.err.println("Invalid input. Please try again.");
                 input.nextLine(); //descarta entrada para o usuario tentar de novo
+                cont--;
             }
 
             cont++;
 
-            System.out.print("? ");
+            System.out.print(" Entre c/ novo registro: ");
         }//fim do while
     }//fim do método addRecords
 
