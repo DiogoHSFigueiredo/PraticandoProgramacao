@@ -10,31 +10,42 @@ import java.util.Scanner;
  *
  * @author Diogo
  */
-
 public class Addition {
-    
 
-    //Método principal
+    //Mï¿½todo principal
     public static void main(String[] args) {
-       
-        //Cria objeto Scanner para utilização
+
+        //Cria objeto Scanner para utilizaï¿½ï¿½o
         Scanner input = new Scanner(System.in);
-        
-        //Declara variáveis para utilização
-        int number1; //Receberá o primeiro número do usuário
-        int number2; //Receberá o 2 número do usuário
-        int sum; //Receberá a soma dos 2 números
-        
+
+        //Declara variï¿½veis para utilizaï¿½ï¿½o
+        int number1; //Receberï¿½ o primeiro nï¿½mero do usuï¿½rio
+        int number2; //Receberï¿½ o 2 nï¿½mero do usuï¿½rio
+        int number3;
+        int number4;
+        int number5;
+
+        int sum; //Receberï¿½ a soma dos 2 nï¿½meros
+
         System.out.print("Enter first integer: ");
-        number1 = input.nextInt(); //Lê o primeiro número digitado e armazena na primeira variável
-        
+        number1 = input.nextInt(); //Lï¿½ o primeiro nï¿½mero digitado e armazena na primeira variï¿½vel
+
         System.out.print("Enter second integer: ");
-        number2 = input.nextInt(); //Lê o segundo número digitado  e armazena na segunda variável
-        
-        sum = number1 + number2; // soma os números, depois armazena o total em sum
-        
+        number2 = input.nextInt(); //Lï¿½ o segundo nï¿½mero digitado  e armazena na segunda variï¿½vel
+
+        System.out.println("Enter third integer");
+        number3 = input.nextInt();
+
+        System.out.println("Enter fourth integer");
+        number4 = input.nextInt();
+
+        System.out.println("Enter fifth integer");
+        number5 = input.nextInt();
+
+        sum = number1 + number2 + number3 + number4 + number5; // soma os nï¿½meros, depois armazena o total em sum
+
         System.out.printf("Sum is \t%d%nCONGRATULATIONS\n", sum); // exibe a soma
-        
+
     }// fim de main
-    
+
 } // fim da classe

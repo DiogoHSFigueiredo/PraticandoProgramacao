@@ -6,7 +6,7 @@ public class Welcome1 {
 
     public static void main(String[] args) {
 
-        System.out.println("Welcome to Java Programming!\nParabéns, este é o seu primeiro programa a partir do Prompt de Comando Windows");
+        System.out.println("Welcome to Java Programming! \nParabÃ©ns, este Ã© o seu primeiro programa a partir do Prompt de Comando Windows");
     }//fim do main
 
 }//fim da classe
